@@ -26,14 +26,17 @@ fi
 
 GADGET="$1"
 JAR="${YSOSERIAL_JAR:-./ysoserial-all.jar}"
+JAVA_COOKIE_DIR="java_cookie"
 
 # Output files
-RAW_PAYLOAD="payload.bin"
-GZIPPED_PAYLOAD="payload.gz"
-BASE64_PAYLOAD="payload.b64"
-URLENCODED_PAYLOAD="payload.url.txt"
+mkdir -p $JAVA_COOKIE_DIR
+RAW_PAYLOAD="${JAVA_COOKIE_DIR}/payload.bin"
+GZIPPED_PAYLOAD="${JAVA_COOKIE_DIR}/payload.gz"
+BASE64_PAYLOAD="${JAVA_COOKIE_DIR}/payload.b64"
+URLENCODED_PAYLOAD="${JAVA_COOKIE_DIR}/payload.url.txt"
+COOKIEFILE="${JAVA_COOKIE_DIR}/cookie.txt"
 
-OUT_FILE="${OUT_FILE:-cookie.txt}"
+OUT_FILE="${COOKIEFILE}"
 
 # ============================
 #   Decide mode
@@ -53,6 +56,7 @@ fi
 # ============================
 if [[ ! -f "$JAR" ]]; then
     echo -e "${RED}[!] Error: ysoserial JAR not found: $JAR${RESET}"
+    echo -e "${CYAN}[i] ysoserial JAR file can also set via env variable (YSOSERIAL_JAR)${RESET}"
     exit 1
 fi
 
